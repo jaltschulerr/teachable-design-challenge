@@ -7,6 +7,8 @@
     <title>Teachable Test</title>
     <link href="assets/css/style.css" rel="stylesheet">
 
+		
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -14,28 +16,248 @@
   </head>
   <body>
     <header>
-	    <h1>Teachable Test</h1>
+			<!-- Fixed navbar -->
+    	<nav class="navbar navbar-default navbar-fixed-top">
+      	<div class="container">
+        	<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+          	</button>
+          	<a class="navbar-brand text-uppercase" href="#">EventMe</a>
+        	</div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#Events">Events</a></li>
+            <li><a href="#Calendar">Calendar</a></li>
+            <li><a href="#Favorites">Favorites</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Create New Event</a></li>
+						<li><img src="assets/images/User@3x.png" class="img-responsive user-thumbnail invisible-mobil" alt="Profile Photo"></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+       </div>
+    	</nav>			
     </header>
-    <main>
-	    <div class="container">
+		<!--Don't forget to edit the body css in style.css under the sass folder, you edited it to test the navbar -->
+				
+   	<main> 	
+    	<div class="wrap container">
+    	
+    		<div class="row">
+    			<div class="wrap">
+						<div class="guest-buttons">
+								<button class="btn btn-default add-guest" type="submit">
+									<svg width="20px" height="20px" viewBox="113 15 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<g id="Plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(113.000000, 15.000000)">
+													<rect id="Sizer" x="0" y="0" width="20" height="20"></rect>
+													<path d="M10,1.66666667 L10,18.3333333" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+													<path d="M1.66666667,10 L18.3333333,10" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+											</g>
+									</svg>
+								Add Guest
+								</button>
+
+
+								<button class="btn btn-default import-guest" type="submit">
+
+									<svg width="25px" height="18px" viewBox="78 17 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<g id="cloud-storage-download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(78.000000, 17.000000)">
+													<g id="Capa_1" fill="#FFFFFF">
+															<path d="M20.5320365,8.22704715 C20.8781017,7.70418291 21.0506469,7.12220844 21.0506469,6.48125665 C21.0506469,5.58720312 20.7343141,4.82399858 20.1020028,4.19137717 C19.4695587,3.55897731 18.7063098,3.24264445 17.8122563,3.24264445 C17.010989,3.24264445 16.3110599,3.50412088 15.7123804,4.02707373 C15.2149947,2.81252216 14.4197979,1.83844381 13.3277207,1.1047944 C12.2356434,0.370923431 11.0316377,0.00403225806 9.71579227,0.00403225806 C7.92790677,0.00403225806 6.40127614,0.63674229 5.13616625,1.90185218 C3.87096774,3.1666519 3.23856788,4.69337114 3.23856788,6.48138958 C3.23856788,6.59101382 3.24703119,6.77237682 3.2638692,7.02530131 C2.26869904,7.48918823 1.47598369,8.18495214 0.885457285,9.11259305 C0.295152428,10.0404998 0,11.052375 0,12.1490163 C0,13.7093672 0.554634881,15.0437788 1.66359447,16.152827 C2.77259837,17.2622297 4.1073201,17.8165987 5.66758242,17.8165987 L19.4320276,17.8165987 C20.7728199,17.8165987 21.917671,17.3419887 22.8666253,16.3933446 C23.8154467,15.4447005 24.2899238,14.2998493 24.2899238,12.9585697 C24.2897909,11.8284296 23.9375665,10.8227579 23.233162,9.94115562 C22.5288018,9.05981921 21.6286778,8.48856788 20.5320365,8.22704715 Z M16.066776,10.4282169 L11.6261964,14.8690624 C11.5503811,14.9447005 11.453341,14.9827632 11.3352091,14.9827632 C11.2171659,14.9827632 11.1201258,14.9447005 11.0442219,14.8690624 L6.59119107,10.4157657 C6.51528713,10.3399504 6.47740163,10.2429103 6.47740163,10.1247784 C6.47740163,10.0151542 6.51728111,9.92024105 6.59739454,9.84017192 C6.67768522,9.76005849 6.77237682,9.72004608 6.88200106,9.72004608 L9.71583658,9.72004608 L9.71583658,5.26697093 C9.71583658,5.15734669 9.75593761,5.06243353 9.83600674,4.98218717 C9.91616448,4.90220666 10.010989,4.86219426 10.1206133,4.86219426 L12.5498493,4.86219426 C12.6596508,4.86219426 12.7540766,4.90207373 12.8346331,4.98218717 C12.9145693,5.06243353 12.9545817,5.15734669 12.9545817,5.26697093 L12.9545817,9.72004608 L15.7884172,9.72004608 C15.9065048,9.72004608 16.0035448,9.75793158 16.0792272,9.8337469 C16.1551755,9.90956221 16.1927508,10.0066023 16.1927508,10.1247341 C16.1927508,10.2263825 16.1509217,10.3271889 16.066776,10.4282169 L16.066776,10.4282169 Z" id="Shape"></path>
+													</g>
+											</g>
+									</svg>
+									Import Guest List
+								</button>
+							</div>
+			  		</div><!-- End .wrap -->
+			  	</div><!-- End .row -->
+				
 	    	<div class="row">
-	    		<div class="sidebar-left col-xs-12 col-sm-4">
-		    		
-	    			<form action="action_page.php">
-						  <input type="text" name="name" value="name">
-						  <input type="text" name="email" value="email">
-						  <input type="submit" value="Submit">
-						</form>
-	    				
-    			</div>
-	    		<div class="main-content col-xs-12 col-sm-8">
-	    			<div class="registrants">
-		    			{registrants}
+	    		<div class="col-lg-6 no-padding">
+	    			<div class="guest-card my2">
+	    	 
+	    			 <div class="container-fluid">
+							 <div class="guest-list-header">
+							 	 			<h3 class="text-uppercase">Guest List</h3>
+						 	 			  <div class="space"></div>
+											<div class="guest-total ">
+												<span class="guest-total-number">5</span>
+											</div>
+							 	 </div>
+							</div>
+
+							<h4 class="group-label">Table 1</h4>
+
+								 <div class="guest btn-block">
+									 <div class="hamburger">
+											<span class="ham-bar"></span>
+											<span class="ham-bar-mid"></span>
+											<span class="ham-bar"></span>
+									 </div>
+
+									 <img src="assets/images/thomas_rickshaw@1x.png" class="img-responsive guest-thumbnail" alt="Thomas Rickshaw Photo">
+
+									 <h4 class="guest-name">Thomas Rickshaw</h4>
+
+									 <div class="star-container">
+										  <img src="assets/images/Star.svg" alt="Star" class="favorite-star">
+									 </div>
+
+									 <div class="stoplight">
+											<span class="red-light"></span>
+											<span class="yellow-light"></span>
+											<span class="green-light"></span>
+									 </div>
+								 </div>
+
+								 <div class="guest btn-block">
+									 <div class="hamburger">
+											<span class="ham-bar"></span>
+											<span class="ham-bar-mid"></span>
+											<span class="ham-bar"></span>
+									 </div>
+
+									 <img src="assets/images/Caroline%20Attaway@1x.png" class="img-responsive guest-thumbnail" alt="Caroline Attaway Photo">
+
+									 <h4 class="guest-name">Caroline Attaway</h4>
+
+									 <div class="star-container">
+										  <img src="assets/images/Star-dim.svg" alt="Star" class="favorite-star">
+									 </div>
+
+									 <div class="stoplight">
+											<span class="red-light"></span>
+											<span class="yellow-light"></span>
+											<span class="green-light"></span>
+									 </div>
+								 </div>
+
+								 <div class="guest btn-block">
+									 <div class="hamburger">
+											<span class="ham-bar"></span>
+											<span class="ham-bar-mid"></span>
+											<span class="ham-bar"></span>
+									 </div>
+
+									 <img src="assets/images/Andre%20Desparado@1x.png" class="img-responsive guest-thumbnail" alt="Andre Desperado Photo">
+
+									 <h4 class="guest-name">Andre Desperado</h4>
+
+									 <div class="star-container">
+										  <img src="assets/images/Star.svg" alt="Star" class="favorite-star">
+									 </div>
+
+									 <div class="stoplight">
+											<span class="red-light"></span>
+											<span class="yellow-light"></span>
+											<span class="green-light"></span>
+									 </div>
+								 </div>
+
+								 <div class="guest btn-block">
+									 <div class="hamburger">
+											<span class="ham-bar"></span>
+											<span class="ham-bar-mid"></span>
+											<span class="ham-bar"></span>
+									 </div>
+
+									 <img src="assets/images/Barack%20Obama@1x.png" class="img-responsive guest-thumbnail" alt="Barack Obama Photo">
+
+									 <h4 class="guest-name">Barack Obama</h4>
+
+									 <div class="star-container">
+										  <img src="assets/images/Star-dim.svg" alt="Star" class="favorite-star">
+									 </div>
+									 
+									 <div class="stoplight">
+											<span class="red-light"></span>
+											<span class="yellow-light"></span>
+											<span class="green-light"></span>
+									 </div>
+								 </div>
+
+							 <h4 class="group-label">Table 2</h4>
+	
+										 <div class="guest btn-block">
+									 <div class="hamburger">
+											<span class="ham-bar"></span>
+											<span class="ham-bar-mid"></span>
+											<span class="ham-bar"></span>
+									 </div>
+
+									 <img  src="assets/images/Ranjit%20Sanjar@1x.png" class="img-responsive guest-thumbnail" alt="Ranjit Sanjar Photo">
+
+									 <h4 class="guest-name">Ranjit Sanjar</h4>
+
+									 <div class="star-container">
+										  <img src="assets/images/Star.svg" alt="Star" class="favorite-star">
+									 </div>
+									 
+									 <div class="stoplight">
+											<span class="red-light"></span>
+											<span class="yellow-light"></span>
+											<span class="green-light"></span>
+									 </div>
+								 </div>
+								
 	    			</div>
-	    		</div>
-	    	</div>
-	    </div>
+						 </div><!-- End .col-md-6 -->	
+    			
+					
+					
+					<div class="col-lg-6 no-padding invisible-mobile">
+						<div class="guest-card my2">
+							<div class="container wrap">
+								
+									<div class="status-bar">
+										<h4 class="mr4">Status</h4>
+										<div class="stoplight">
+											<span class="red-light"></span>
+											<span class="yellow-light"></span>
+											<span class="green-light"></span>
+										</div>
+									</div>
+
+									<img src="assets/images/thomas_rickshaw@1x.png" class="img-responsive user-pic center-block" alt="Thomas Rickshaw Photo">
+
+									<h1 class="text-center">Thomas Rickshaw</h1>
+									
+									<div class="guest-profile-info">	
+										<hr>
+										
+										<div class="text-center">
+											 <p><span class="guest-profile-label">Email</span>Thomas.Rickshaw@gmail.com</p>
+											 <p><span class="guest-profile-label">Phone</span>1(888) 345-5555</p>
+											 <p><span class="guest-profile-label">Current Group</span>Group 1</p>
+										</div>
+										
+										<div class="row">
+											<div class="col-sm-2 text-center">
+												<input class="btn btn-default text-uppercase invisible-mobile edit" type="submit" value="Edit">
+											</div>
+											<div class="col-sm-2 col-sm-push-6 text-center">
+												<input class="btn btn-default text-uppercase invisible-mobile delete" type="submit" value="Delete">
+											</div>
+										</div>
+									</div><!-- End .guest-profile-info -->
+									
+								</div><!-- End .container -->
+							</div><!-- End .guest-card -->
+				    </div><!-- End .col-lg-6 -->
+	 
+		
+	    	</div><!-- End .row -->
+			</div><!-- End wrap container -->
+						
     </main>
+    
+	
+		
     <footer>
 	    
     </footer>

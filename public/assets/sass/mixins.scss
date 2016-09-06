@@ -1,0 +1,48 @@
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-center {
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin orange-button {
+	font-family: $bold;
+	background-color: $action-orange;
+	color: $text-white;
+	letter-spacing: $button-spacing;
+}
+
+@mixin blue-button {
+	font-family: $bold;
+	background-color: $button-blue;
+	color: $text-white;
+	letter-spacing: $button-spacing;
+}
+
+@mixin lights {
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius: 50%;
+	
+	@media (max-width: 40rem){
+		width: .8rem;
+		height: .8rem;
+		border-radius: 50%;
+	}
+}
+
+//Margin preserves .guest margins when hidden
+@mixin invisible-mobile {
+	@media (max-width: 64rem){
+		visibility: hidden;
+		height: 0;
+		width: 0;
+		margin: .25rem;
+	}
+}

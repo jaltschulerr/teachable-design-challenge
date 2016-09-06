@@ -1,51 +1,140 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-	font-size:16px;
+	font-family: $font-stack;
 }
 
-// Header Styles
-header {
-	background:black;
-	text-align: center;
-	padding:20px 0;
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
 }
 
-header h1 {
-		padding:0;
-		margin:0;
-		color:white;
-		text-transform: uppercase;
-		font-size:14px;
-	}
+h1 {
+	color: $heading-blue;
+	font-family: $bold;
+}
+
+h2, h3 {
+	color: $label-blue;
+	font-family: $heavy;
+}
+
+p {
+	color: $text-grey;
+	letter-spacing: $standard-spacing;
+	margin-bottom: 3rem;
+}
+
+hr {
+	border-color: $white;
+	padding-bottom: 2rem;
+}
 
 // Content Styles
+.wrap {
+	width: 100%;
+}
+
 main {
-	padding:100px 0;
+	.container-fluid {
+		margin-left: -1rem;
+		margin-right: -1rem;
 	}
-	
-	
-// Sidebar Left
-main .sidebar-left form {
-	margin-bottom:20px;
-	padding:30px;
-	background:#eaeaea;
-	border:1px solid #ccc;
-  }
-		
-main .sidebar-left form input {
-	width:100%;
-	margin-bottom:10px;
-	}
+}
 
-main .sidebar-left .welcome-message {
-	padding:30px;
-	background:#eaeaea;
-	border:1px solid #ccc;
-	}
-
+.no-padding {
+	padding: 0rem 0rem;
+}
 
 // Main Content
-main .main-content .registrants {
-		padding:30px;
-		background:#eaeaea;
-		border:1px solid #ccc;
+.flex {
+	@include flexbox;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+
+.btn {
+	align-items: center;
+	justify-content: space-between;
+	
+	border: none;
+	height: 5rem;
+
+	svg {
+		margin-right: 5%;
 	}
+}
+
+
+@media (max-width: 40rem) {
+	h2, h3 {
+		font-size: 14px;
+	}
+	.btn {
+		
+		svg {
+			height: (100%-70%);
+		}
+	} 
+	.no-padding {
+		padding: 0rem 1rem;
+	}
+}
+
+@media (max-width: 64rem){
+	.invisible-mobile {
+		@include invisible-mobile;
+		
+		.container-fluid {
+			height: 0;
+		}
+	}
+	.btn {
+		@include flex-center;
+	}
+	
+}
+
+@media (min-width: 64rem){
+	.ml2, .my2 {
+		margin-left: 2rem;
+	}
+	.mr2, .my2 {
+		margin-right: 2rem;
+	}
+	.mr4, .my4 {
+		margin-right: 4rem;
+	}
+	.ml4, .my4 {
+		margin-left: 4rem;
+	}
+	.pr4, .py4 {
+		padding-right: 4rem;
+	}
+	.pl4, .py4 {
+		padding-left: 4rem;
+	}
+}
+
+/*
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 28px;
+  }
+}
+*/
