@@ -39,19 +39,24 @@ $standard-radius: .5rem;
 	padding: 3rem;
 	margin-top: 2rem;
 	
-	.edit {
-		@include blue-button;
-		min-width: 18rem;
-		width: 100%;
-		text-align: center;
-		margin-top: 4rem;
-	}
-	.delete {
-		@include orange-button;
-		min-width: 18rem;
-		width: 100%;
-		margin-top: 4rem;
-	}
+	.guest-profile-buttons {
+		@include flexbox;
+		justify-content: space-between;
+	
+		.edit {
+			@include blue-button;
+			min-width: 18rem;
+			width: 100%;
+			text-align: center;
+			margin-top: 4rem;
+		}
+		.delete {
+			@include orange-button;
+			min-width: 18rem;
+			width: 100%;
+			margin-top: 4rem;
+		}
+  }	
 }
 
 .guest-list-header {
@@ -175,7 +180,6 @@ $standard-radius: .5rem;
 .guest-profile-label {
 	color: $label-blue;	
 	font-family: $semi-bold;
-	
 	margin-right: 3rem;
 }
 

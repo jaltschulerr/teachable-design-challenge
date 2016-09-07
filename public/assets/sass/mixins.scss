@@ -39,10 +39,11 @@
 
 //Margin preserves .guest margins when hidden
 @mixin invisible-mobile {
-	@media (max-width: 64rem){
+	@media (max-width: 108rem){
 		visibility: hidden;
 		height: 0;
 		width: 0;
 		margin: .25rem;
+		display: none;
 	}
 }

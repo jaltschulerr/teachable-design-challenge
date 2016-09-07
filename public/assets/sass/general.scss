@@ -91,10 +91,11 @@ main {
 		.container-fluid {
 			height: 0;
 		}
+		.container{
+			height: 0;
+		}
 	}
-	.btn {
-		@include flex-center;
-	}
+	
 	
 }
 
